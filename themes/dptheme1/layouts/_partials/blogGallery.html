@@ -22,7 +22,7 @@
                 {{ $dateHuman := .Date | time.Format ":date_long" }}
                 <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
             </p>
-            <p>{{ with .Params.desc }}{{ . }}{{ end }}</p>
+            <p>{{ with .Description }}{{ . }}{{ end }}</p>
         </div>
     </div>
 {{ end }}

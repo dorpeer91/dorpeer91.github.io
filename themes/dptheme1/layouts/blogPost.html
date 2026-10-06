@@ -1,5 +1,9 @@
 {{ define "main" }}
 <h1>{{ .Title }}</h1>
+{{/* Description */}}
+{{ with .Description }}
+  <p>{{ . }}</p>
+{{ end }}
 {{/* Back Button */}}
 {{ with .Parent }}
 <p><a href="{{ .RelPermalink }}">< back to {{.Title}}</a></p>
@@ -14,10 +18,7 @@
 {{/* Next and Previous */}}
 
 <div class="blogContent">
-  {{/* Description */}}
-  {{ with .Description }}
-    <p>{{ . }}</p>
-  {{ end }}
+
 
 
  
