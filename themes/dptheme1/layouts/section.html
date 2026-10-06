@@ -1,5 +1,23 @@
 {{ define "main" }}
-  <h1>{{ .Name }}</h1>
+  <h1>{{ .Name }}
+  {{ $linkToRss := slice }}
+  {{ with eq .Title "Blog" }}
+    {{ with $.Site.Home }}
+      {{ with .OutputFormats.Get "rss" }}
+        {{ with .RelPermalink }}
+          {{ $linkToRss = . }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
+    {{ with resources.GetMatch "images/rss.png" }}
+      <a href = "{{ $linkToRss }}">
+        <img src="{{.RelPermalink}}" width="20">
+      </a>
+    {{ end }}
+  {{ end }}
+</h1>
+
+
 
   {{/* Description */}}
   {{ with .Description }}

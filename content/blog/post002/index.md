@@ -3,8 +3,7 @@ date: '2026-08-18T16:05:15+02:00'
 draft: false
 layout: blogPost
 title: Why I've built my own website from scratch, in 2026?
-params:
-    desc: 'A heartfelt attempt of trying to reconcile with the fact that I’m a giant nerd.'
+description: A heartfelt attempt of trying to reconcile with the fact that I’m a giant nerd.
 ---
 
 Even 10 years ago the need for a personal website was questionable, since already back then you could have gotten by just by having one or more social media profiles, but I always felt that you should also have your own personal website, where you are not bound by the limitations of a platform. In a personal website you can choose exactly how you want to showcase your work and yourself. You can choose to emphasize specific works, elements, and it’s a way to define your artistic self in a clearer way that what a social media account allows you to. 
