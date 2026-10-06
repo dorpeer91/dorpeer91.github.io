@@ -325,20 +325,18 @@ footer {
             time {
                 font-size: 65%;
             }
-            .
+            
         }
     }
     .gallery {
         max-width: 100%;
     }
     .blogContent {
-    max-width: 48rem;
-    margin: auto;
-
-
-    p {
-    font-size: 1.5rem;
-    line-height: 1.75rem;
+        max-width: 48rem;
+        margin: auto;
+        p {
+            font-size: 1.5rem;
+            line-height: 1.75rem;
+        }
     }
-}
 }
