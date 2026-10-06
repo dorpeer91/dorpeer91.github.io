@@ -4,6 +4,9 @@ title: DOR PE.ER
 author: Dor Peer
 theme: dptheme1
 pluralizelisttitles: "false"
+caches:
+  images:
+    dir: :cacheDir/images
 menus:
   main:
   - name: animation
