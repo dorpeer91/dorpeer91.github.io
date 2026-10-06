@@ -11,6 +11,12 @@
     --body-width: 75rem;
 }
 /* Core */
+
+* {
+  box-sizing: border-box;
+}
+
+
 html {
     font-family: var(--body-font);
     font-size: var(--basic-font-size);
@@ -263,4 +269,76 @@ footer {
     font-size: 1.25rem;
     line-height: 1.95rem;
     }
+}
+
+/* mobile version */
+
+@media (max-width: 400px) {
+    .homepageParagraph{
+        padding: 0px;
+    }
+    main {
+        padding-inline: 10px;
+    }
+    .sectionGalleryLarge, .sectionGallery  {
+        grid-template-columns: 1fr;
+    }
+    .subGalleries {
+        grid-template-columns: 1fr 1fr;
+    }
+    header {
+        flex-direction: column;
+        nav {
+            margin: 0px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            .menuItem {
+                padding: 0px;
+                margin: 0px;
+            }
+        }
+    }
+    .blogEntry {
+        display: flex;
+        flex-direction: column;
+        margin-block-end: 1.45rem;
+        .entryCover {
+            aspect-ratio: 3/1;
+            width: 100%;
+            img {
+                width: 100%;
+                height: 100%;
+                
+            }
+        }
+        .entryInfo {
+            h2 {
+                font-size: 1.5rem;
+                line-height: 1.85rem;
+            }
+            width: 100%;
+            margin-left: 0px;   
+            * {
+                margin-block-start: 0px;
+                margin-block-end: 5px
+            }
+            time {
+                font-size: 65%;
+            }
+            .
+        }
+    }
+    .gallery {
+        max-width: 100%;
+    }
+    .blogContent {
+    max-width: 48rem;
+    margin: auto;
+
+
+    p {
+    font-size: 1rem;
+    line-height: 1.75rem;
+    }
+}
 }
