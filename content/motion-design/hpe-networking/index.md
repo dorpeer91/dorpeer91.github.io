@@ -1,9 +1,14 @@
 ---
-date: 2026-03-25
-draft: true
-title: Hpe Aletra
+date: '2025-08-11T16:41:52+02:00'
+draft: false
+title: 'Hpe Networking'
+description:
 params:
-    credits:
+  showDate: true
+  project: 
+  galleries:
+  galleries_includeAll: false
+  credits:
     - name: "Dor Pe'er"
       role: "Storyboard, Design and Animation"
     - name: "Vince Penman"
@@ -12,5 +17,7 @@ params:
       role: "Studio"
     - name: "HPE"
       role: "Client"
+
 ---
-{{< youtube 1K_DiN-c54E >}}
+
+{{< vimeo 1108920599 >}}
