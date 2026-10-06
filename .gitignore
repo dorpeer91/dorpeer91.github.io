@@ -5,3 +5,6 @@ public/
 
 content/.obsidian/
 content/.trash/
+
+# ignore Ds Store files
+.DS_Store
