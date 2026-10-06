@@ -1,0 +1,25 @@
+festivals:
+  - name: "Norwalk Film Festival"
+    award: "Official Selection"
+    year: 2021
+  - name: "FilmQuest"
+    award: "Official Selection"
+    year: 2021
+  - name: "HollyShorts Film Festival"
+    award: "Official Selection"
+    year: 2021
+  - name: "BELIFF - Be Epic! Film Fest LONDON"
+    award: "Jury Award"
+    year: 2021
+  - name: "Oregon Scream Week"
+    award: "Best International Director Award Finalist"
+    year: 2021
+  - name: "Austin After Dark"
+    award: "Official Selection"
+    year: 2021
+  - name: "TLVFest"
+    award: "Official Selection"
+    year: 2020
+  - name: "Utopia Film Festival"
+    award: "Official Selection"
+    year: 2020

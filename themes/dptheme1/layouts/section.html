@@ -1,0 +1,15 @@
+{{ define "main" }}
+  <h1>{{ .Name }}</h1>
+
+  {{/* Description */}}
+  {{ with .Description }}
+    <p>{{ . }}</p>
+  {{ end }}
+
+  {{ .Content }}
+  {{ if eq .Title "Blog" }}
+    {{ partial "blogGallery.html" .Pages }}
+  {{ else }}
+    {{ partial "sectionGallery.html" .Pages }}
+  {{ end }}
+{{ end }}

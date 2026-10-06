@@ -1,0 +1,12 @@
+<div class="sectionGallery">
+    {{ range . }}
+    <section>
+        <a href="{{ .RelPermalink }}">
+        {{ $coverImage := partial "getCover.html" . }}
+        <div class="imageContainer">
+          <img src="{{ $coverImage.RelPermalink }}">
+        </div>
+        <p>{{ .LinkTitle }}</a></p>
+    </section>
+    {{ end }}
+</div>

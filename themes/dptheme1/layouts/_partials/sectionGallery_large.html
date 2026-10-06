@@ -1,0 +1,13 @@
+<div class="sectionGalleryLarge">
+    {{ range . }}
+    <section>
+        <a href="{{ .RelPermalink }}">
+        {{ with .Resources.GetMatch "cover.*" }}
+        <div class="imageContainer">
+        <img src="{{ .RelPermalink }}">
+        </div>
+        {{end}}
+        <p>{{ .LinkTitle }}</a></p>
+    </section>
+    {{ end }}
+</div>

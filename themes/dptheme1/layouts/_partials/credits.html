@@ -1,0 +1,36 @@
+  {{ with or (.Resources.Get "credits.yaml") (.Params.credits) }}
+      <h2>Credits</h2>
+  {{ end }}
+  {{ with .Params.credits }}
+      <div class="credits">
+        <ul>
+          {{ range . }}
+            <li><strong>{{ .role }}:</strong> {{.name}}</li>
+          {{ end }}
+        </ul>
+      </div>
+  {{ end }}
+  {{ with .Resources.Get "credits.yaml" }}
+      {{ with . | transform.Unmarshal }}
+          {{ with .cast }}
+            <div class ="credits">
+              <h3>Cast</h3>
+              <ul>
+              {{ range . }}
+                <li>{{.}}</li>
+              {{ end }}
+              </ul>
+            </div>
+          {{ end }}
+          {{ with .crew }}
+            <div class ="credits">
+              <h3>Crew</h3>
+              <ul>
+              {{ range . }}
+                <li><strong>{{ .role }}</strong>: {{.name}}</li>
+              {{ end }}
+            </ul>
+          </div>
+        {{ end }}
+      {{ end }}
+  {{ end }}

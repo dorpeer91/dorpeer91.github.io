@@ -1,0 +1,17 @@
+{{ $blogMainPage := .GetPage "blog" }}
+{{ $thisPageName := .Name | lower }}
+{{ $relevantBlogPages := slice }}
+{{ with $blogMainPage }}
+    {{range .Pages}}
+        {{ $currentBlogPage := . }}
+        {{ with .Params.project }}
+            {{ if eq . $thisPageName }}
+                {{ $relevantBlogPages = $relevantBlogPages | append $currentBlogPage }}
+            {{ end }}
+        {{ end }}
+    {{ end }}
+    {{ with $relevantBlogPages }}
+        <h2>Related Blog Posts</h2>
+        {{ partial "blogGallery.html" . }}
+    {{ end }}
+{{ end }}

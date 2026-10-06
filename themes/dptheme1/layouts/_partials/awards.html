@@ -1,0 +1,26 @@
+{{ with .Resources.Get "awards.yaml" }}
+    <h2>Festivals & Awards</h2>
+    {{ $awards := . | transform.Unmarshal }}
+    {{ with $awards }}
+        {{ $festivals := .festivals }}
+        {{ $years := slice }}
+        {{ range $festivals }}
+            {{$years = $years | append .year }}
+        {{ end }}
+        {{ $years = uniq $years }}
+        {{ $years = sort $years "value" "desc" }}
+        {{ range $years }}
+            {{ $curYear := . }}
+            <div class="awards">
+                <h3> {{ $curYear }} </h3>
+                <ul>
+                {{ range $festivals }}
+                    {{ if eq .year $curYear }}
+                        <li><strong>{{ .name }}</strong> - {{ .award }}</li>
+                    {{ end }}
+                {{ end }}
+                </ul>
+            </div>
+        {{ end }}
+    {{ end }}
+{{ end }} 

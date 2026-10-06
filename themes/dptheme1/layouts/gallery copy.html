@@ -1,0 +1,77 @@
+{{ define "main" }}
+
+<h1>{{ .Title }}</h1>
+{{ with .Parent }}
+  <p><a href="{{ .RelPermalink }}">< back to {{.Title}}</a></p>
+{{ end }}
+  {{/* Date  */}}
+  {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
+  {{ $dateHuman := .Date | time.Format ":date_long" }}
+  {{ if or (.Params.showDate) (not (isset .Params "showdate")) }}
+    <div class="time"><time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time></div>
+  {{ end }}
+  {{/* Description */}}
+  {{ with .Description }}
+    <p>{{ . }}</p>
+  {{ end }}
+
+  {{ .Content }}
+  
+  {{/* ART GALLERY */}}
+  {{ $curSection := .Page.CurrentSection }}
+  {{ $thisPage := .Page }}
+  {{ $images := slice }}
+  {{ $imagesFromBlog := slice }}
+  {{ $pagesFromBlog := slice }}
+  {{/* Find blog posts that have this gallery mentioned in the frontmatter */}}
+  {{ with .Site.GetPage "/blog" }}
+    {{/* go over all the blog posts */}}
+    {{ range .Pages }}
+      {{ $curBlogPage := . }}
+      {{/* on each post, go over the "galleries" parameter, see if this gallery is included there */}}
+      {{ range .Params.galleries }}
+          {{ with eq . $thisPage.Title }}
+            {{ $pagesFromBlog = $pagesFromBlog | append $curBlogPage}}
+            {{ break }}
+          {{ end }}
+      {{ end }}
+    {{ end }}
+    {{/* go over the selected pages from the blog */}}
+    {{ range $pagesFromBlog }}
+      {{/* And append the images from these pages to the $images variable */}}
+      {{ range .Resources.ByType "image" }}
+        {{$images = $images | append .}}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+  {{ with $curSection }}
+      {{ $localImages := $thisPage.Resources.Match "images/*"  }}
+      {{ with $localImages }}
+        {{ $localImages = sort . "Name" "desc"}}
+      {{ end }}
+      {{ $images = $images | append $localImages }}
+      {{ $data := "info.yaml" | $.Resources.Get | transform.Unmarshal }}
+      {{ $curImage := slice }}  
+      <div class="gallery">
+      {{ $mySize := 1}}
+        {{ range $images }}
+          {{ $mySize = 1 }}
+          {{ $curImage = . }}
+          {{ range $data }}
+            {{ $curDataItem := . }}
+            {{ with eq .name ($curImage | path.Base)  }}
+              {{ $mySize = $curDataItem.size }}
+              {{ break }}
+            {{ end }}
+          {{ end }}
+          {{ $mySize = mul $mySize 100 }}
+          <div style="width:{{$mySize}}%" >
+            <a class="galleryItem" href="{{ .RelPermalink }}">
+              <img src ="{{ .RelPermalink }}">
+            </a>
+          </div>
+        {{ end }}
+      </div>
+  {{ end }}
+{{/* ART GALLERY END */}}
+{{ end }}

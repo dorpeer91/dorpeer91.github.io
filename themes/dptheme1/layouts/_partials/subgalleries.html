@@ -1,0 +1,24 @@
+{{ $galleryPages := slice }}
+{{ with .Pages }}
+    {{ range . }}
+        {{ $curPage := .}}
+        {{ with eq .Type "gallery" }}
+            {{ $galleryPages = $galleryPages | append $curPage }}
+        {{ end }}
+    {{ end }}        
+{{ end }}
+{{ with $galleryPages }}
+    <h2>Galleries</h2>
+    <div class="subGalleries">
+        {{ range . }}
+            <section>
+                <a href="{{ .RelPermalink }}">
+                {{ $coverImage := partial "getCover.html" . }}
+                <div class="imageContainer">
+                <img src="{{ $coverImage.RelPermalink }}">
+                </div>
+                <p>{{ .LinkTitle }}</a></p>
+            </section>
+        {{ end }}
+    </div>
+{{ end }}

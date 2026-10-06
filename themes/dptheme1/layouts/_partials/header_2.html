@@ -1,0 +1,15 @@
+
+{{ with .Site.Home }}
+    <a href="{{ .RelPermalink }}">
+{{ end }}
+{{ with resources.Get "logo_BoA.png" }}
+    <img src="{{ .RelPermalink }}" alt="{{ $.Site.Title}} Logo" width="35">
+{{ end }}
+<h1 class="websiteHeader">{{ site.Title }}</h1>
+</a>
+<nav>
+{{ partial "menu_main_2.html" . }}
+</nav>
+<nav class="bottomMenu">
+{{ partial "menu_bottom.html" . }}
+</nav>

@@ -1,0 +1,7 @@
+# ignore public directory
+public/
+
+# ignore Obsidian Vault settings folders
+
+content/.obsidian/
+content/.trash/

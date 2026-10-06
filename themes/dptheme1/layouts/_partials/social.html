@@ -1,0 +1,22 @@
+{{ with resources.GetMatch "images/IG.png" }}
+    <a href="https://www.instagram.com/dorpeer91" alt="Instagram">
+        <img src="{{ .RelPermalink }}">
+    </a>
+{{ end }}
+{{ with resources.GetMatch "images/YT.png" }}
+    <a href="https://www.youtube.com/dorpeer91" alt="Youtube">
+        <img src="{{ .RelPermalink }}">
+    </a>
+{{ end }}
+{{ with resources.GetMatch "images/TikTok.png" }}
+    <a href="https://www.tiktok.com/@dorpeer91" alt="TikTok">
+        <img src="{{ .RelPermalink }}">
+    </a>
+{{ end }}
+{{ with resources.GetMatch "blog/index.xml" }}
+    <a href="{{.RelPermalink}}" alt="rss feed">
+        {{ with resources.GetMatch "images/rss.png" }}
+            <img src="{{ .RelPermalink }}">
+        {{ end }}
+    </a>
+{{ end }}

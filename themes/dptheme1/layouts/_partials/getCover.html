@@ -1,0 +1,13 @@
+{{ $coverImage := dict }}
+<div class="imageContainer">
+{{ with .Resources.GetMatch "cover.*" }}
+    {{ $coverImage = . }}
+{{ else }}
+    {{ with .Resources.ByType "image" }}
+    {{ range . }}
+        {{ $coverImage = .}}
+        {{ break }}
+    {{ end }}
+    {{ end }}
+{{ end }}
+{{ return $coverImage }}

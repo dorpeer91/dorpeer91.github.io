@@ -1,0 +1,31 @@
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+{{/* Back Button */}}
+{{ with .Parent }}
+<p><a href="{{ .RelPermalink }}">< back to {{.Title}}</a></p>
+{{ end }}
+{{/* Date  */}}
+{{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
+{{ $dateHuman := .Date | time.Format ":date_long" }}
+{{ if or (.Params.showDate) (not (isset .Params "showdate")) }}
+<div class="time" ><time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time></div>
+{{ end }}
+
+{{/* Next and Previous */}}
+
+<div class="blogContent">
+  {{/* Description */}}
+  {{ with .Description }}
+    <p>{{ . }}</p>
+  {{ end }}
+
+
+ 
+  {{ .Content }}
+  </div>
+
+  {{- partial "awards.html" . }}
+  {{- partial "credits.html" . }}
+  {{- partial "relatedBlogPosts.html" . }}
+
+{{ end }}

@@ -1,0 +1,21 @@
+<header>
+  <div class="websiteHeader">
+      {{ with resources.Get "images/logo_BoA.png" }}    
+      <img src="{{ .RelPermalink }}" alt="{{ $.Site.Title}} Logo" width="35">
+      {{ end }}
+      <h1>
+        {{ with .Site.Home }}
+        <a href="{{ .RelPermalink }}" >
+        {{ end }}
+        {{ site.Title }}
+        </a>
+      </h1>
+  </div>
+  {{ with .Site.Menus.main }}
+  <nav class="menu">
+    {{ range .}}
+      <a class ="menuItem" href="{{.URL}}">{{ .Name }}</a>
+    {{ end }}
+  {{ end }}
+  </nav>
+</header>

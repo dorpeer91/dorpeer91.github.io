@@ -1,0 +1,14 @@
+<nav>
+    {{ range .Site.Menus.main }}
+      <ul class="menu">
+          <li><a class="menu" href="{{ .URL }}">{{ .Name }}</a></li>
+        <ul class="submenu">
+          {{ range .Page.Pages }}
+          <li>
+            <a class="submenu" href="{{ .RelPermalink }}">{{ .Title  }}</a></li>
+          </li>
+          {{ end }} 
+        </ul>
+      </ul>
+    {{ end }}
+</nav>

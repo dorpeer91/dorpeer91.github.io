@@ -1,0 +1,28 @@
+{{ range . }}
+{{ $page := . }}
+    <div class="blogEntry">
+        <div class="entryCover">
+            {{ $coverImage := "" }}
+            {{ with .Resources.GetMatch "cover.*" }}
+                {{ $coverImage = . }}
+            {{ else }}
+                {{ with .Resources.GetMatch "*" }}
+                    {{ $coverImage = . }}
+                {{ end }}
+            {{ end }}
+            <a href="{{ $page.RelPermalink }}">
+            <img src="{{ $coverImage.RelPermalink }}" alt="Blog Post Cover">
+            </a>
+            
+        </div>
+        <div class="entryInfo">
+            <h2><a href="{{ $page.RelPermalink }}">{{ .Title }}</a></h2>
+            <p>
+                {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
+                {{ $dateHuman := .Date | time.Format ":date_long" }}
+                <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
+            </p>
+            <p>{{ with .Params.desc }}{{ . }}{{ end }}</p>
+        </div>
+    </div>
+{{ end }}

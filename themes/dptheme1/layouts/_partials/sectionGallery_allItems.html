@@ -1,0 +1,19 @@
+  {{ $pages := slice }}
+  {{ range .Site.Menus.main }}
+    {{ with .Page }}
+      {{ $pages = $pages | append .Pages }}
+    {{ end }}
+  {{ end }}
+  <div class="sectionGallery">
+  {{ range $pages }}
+      <section>
+          <a href="{{ .RelPermalink }}">
+          {{ with .Resources.GetMatch "cover.*" }}
+            <div class="imageContainer">
+              <img src="{{ .RelPermalink }}">
+            </div>
+          {{end}}
+          <p>{{ .LinkTitle }}</a></p>
+      </section>
+      {{ end }}
+  </div>

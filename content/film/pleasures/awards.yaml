@@ -1,0 +1,10 @@
+festivals:
+  - name: "Horrible Imaginings Film Festival"
+    award: "Official Selection"
+    year: 2020
+  - name: "Austin Arthouse Film Festival"
+    award: "Official Selection"
+    year: 2020
+  - name: "Midwest Weirdfest"
+    award: "Official Selection"
+    year: 2021 
