@@ -1,14 +1,14 @@
 :root {
-    --background-color: #0d0d0d;
-    --text-color: #e2e0de;
-    --muted-text-color: #afb5bf;
-    --accent: #e2e0de;
+    --text-color: #000000;
+    --muted-text-color: #817e7e;
+    --link-color: #000000;
     --heading-font: 'Roboto Condensed', sans-serif;
-    --heading-color: #e2e0de;
+    --heading-color: #000000;
     --body-font: 'Source Sans 3', sans-serif;
+    --background-color: #FFFFFF;
     --basic-font-size: 16px;
     --basic-line-height: 1.65rem;
-    --body-width: 60rem;
+    --body-width: 75rem;
 }
 /* Core */
 
@@ -28,7 +28,6 @@ html {
 body {
     max-width: var(--body-width);
     margin-inline: auto;
-    margin-block-start: 0px;
 }
 
 p {
@@ -41,9 +40,9 @@ header {
     flex-direction: row;
     padding-inline: 25px;
     padding-bottom: 10px;
-    padding-top: 25px;
+    margin-block-start: 25px;
     justify-content: left;
-    border-bottom: solid 1px #6f7782;
+    border-bottom: solid 1px #c3c2c2;
     .websiteHeader {
         display: flex;
         align-items: center;
@@ -51,7 +50,6 @@ header {
             font-size: 2rem;
             margin: 10px;
             a {
-                color: var(--text-color);
                 text-decoration: none;
             }
         }
@@ -70,7 +68,7 @@ header {
 }
 /* links */
 a {
-    color: var(--accent);
+    color: var(--link-color);
     text-decoration: none;
     &:hover {
         text-decoration: underline;
@@ -78,7 +76,7 @@ a {
 }
 
 p a {
-    color: var(--accent);
+    color: var(--link-color);
     text-decoration: underline;
     &:hover {
         text-decoration: none;
@@ -104,11 +102,6 @@ h1 + * {
     margin-bottom: 2rem;
 }
 
-time {
-    color: var(--muted-text-color);
-    font-size: 0.8rem;
-}
-
 .time{
     time {
         font-size: 0.8rem;
@@ -125,13 +118,6 @@ h2 {
     font-weight: normal;
     font-size: 1.5rem;
     color: var(--heading-color);
-}
-
-h3 {
-    font-family: var(--heading-font);
-    font-size: 1.2em;
-    font-weight: normal;
-
 }
 
 /* Images */ 
@@ -285,13 +271,9 @@ footer {
     }
 }
 
-/* 
-MOBILE 
-MOBILE 
-MOBILE 
-*/
+/* mobile version */
 
-@media (max-width: 800px) {
+@media (max-width: 500px) {
     main {
         padding-inline: 20px;
     }
@@ -306,10 +288,6 @@ MOBILE
     }
     header {
         flex-direction: column;
-        padding-block: 2rem 2rem;
-        .websiteHeader {
-            margin: auto;
-        }
         nav {
             margin: 0px;
             display: grid;

@@ -7,6 +7,10 @@ params:
   showDate: false
 ---
 
-If you have any questions, would like to work together, purchase any of my art or become my friend
+You've made it to the contact page! You must be intrigued.
+
+If you would like to work together, purchase any of my art, or have any questions, feel free to contact me.
 
 dorpeer91 (at) gmail.com
+
+Also, despite my transgressive art I'm still very much a conformist who wants to drink from the attention rivers of babylon, i.e. I'm on social media:

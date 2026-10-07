@@ -68,3 +68,7 @@ resources:
     date: 2021-01-01
     size:
 ---
+
+Graphite, in a way, is the most *basic* drawing medium. My former art teacher said that whichever medium you eventually choose, you learn the foundations with pencil first. And I think I can vouch for that idea. In order to find the right tone It forces you to work patiently and build the darker tones layer after layer. 
+
+Despite quickly falling in love with ink, I found myself always returning also to pencil. Because sometimes you want to work carefully and accurately, build layer after layer, erase and fix mistakes. But it also has it's own expressiveness, it's own unique melancholy that other mediums can't imitate.

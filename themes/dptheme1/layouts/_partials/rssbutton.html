@@ -1,0 +1,13 @@
+{{ $linkToRss := slice }}
+{{ with $.Site.Home }}
+  {{ with .OutputFormats.Get "rss" }}
+    {{ with .RelPermalink }}
+      {{ $linkToRss = . }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+{{ with resources.GetMatch "images/rss_w.png" }}
+  <a href = "{{ $linkToRss }}">
+    <img src="{{.RelPermalink}}" width="20">
+  </a>
+{{ end }}

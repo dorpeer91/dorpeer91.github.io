@@ -53,3 +53,7 @@ resources:
     date: 2014-09-10
     size:
 ---
+
+Most of my illustration is in black and white, but sometimes I like to experiment with other mediums. Sometimes those experiments result in something that I'm happy with, at least enough to share it online. 
+
+Honestly this category is quite a mixed bag (rather than mixed media), and things don't really feel as connected to one another here as they are in the other illustration categories. That being said, there are still some good stuff here that I'm happy to share.
