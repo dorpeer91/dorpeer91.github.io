@@ -10,7 +10,7 @@ params:
   galleries_includeAll: false
   credits:
     - name: "Dor Pe'er"
-      role: "Storyboard, Design and Animation"
+      role: "Animation"
     - name: "Vince Penman"
       role: "Creative Direction"
     - name: "Big Picture Lab"
