@@ -129,7 +129,3 @@ resources:
     size: 1
 
 ---
-
-Ink on paper is probably my favorite medium. I don't know exactly why. I can't fully explain it, but there is immense power and expressiveness in the simplicity of working with such a narrow palette. And there is something very violent and determined about knowing that every time you touch the paper a permenant everlasting mark is there. You can't layer it, you can't undo it. It's like blood. It's scary. 
-
-I don't know what it is about crosshatching that makes it so addictive, but it is. Just filling endless lands of paper with lines and then crossing it again and again, regardless of the subject matter, is soothing and theraputic. It might look extremely boring from the side but it's not. 

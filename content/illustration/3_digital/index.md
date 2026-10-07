@@ -68,5 +68,3 @@ resources:
     date: 2021-01-01
     size: 1
 ---
-
-Over the last couple of years I've opened up more for the possibility of drawing digitally. At first it felt very weird. I've had a Wacom tablet lying around for a couple of years but it wasn't very intuitive to use. Plus the dichotomy between traditional mediums and digital mediums kind of helped me separate my personal art with the professional freelance work I do for companies. (Being that digital stuff is for clients, and traditional stuff is art for the sake of art). But a couple of years ago having to do a storyboard for a client I did so with the tablet and it got me used to the medium, later I experimented with using it for personal projects as well. Honestly it's not too bad. I think that for animation, for practical reasons I will choose painting digitally. When it comes to just static illustration, I think I'd still usually go for a traditional physical medium, because it's more fun and more expressive. That being said, I've made some interesting illustrations digitally for personal reasons throught the last couple of years, and you can see them here. Enjoy!
