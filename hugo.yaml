@@ -26,6 +26,10 @@ menus:
   - name: motion design
     pageRef: /motion-design
     weight: 30
+  - name: creative director
+    pageRef: /creative-director
+    weight: 35
+    parent: motion design
   - name: about
     pageRef: /about
     weight: 50

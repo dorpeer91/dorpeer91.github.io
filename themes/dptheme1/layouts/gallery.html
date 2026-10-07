@@ -54,17 +54,18 @@
       <div class="gallery">
       {{ $mySize := 1}}
         {{ range $images }}
-          {{ $mySize = 1 }}
-          {{ with .Params.Size }}
-            {{ $mySize = . }}
-          {{ end}}
-          {{ $mySize = mul $mySize 100 }}
-          <div style="width:{{$mySize}}%;" >
-            <a class="galleryItem" href="{{ .RelPermalink }}">
-              <img src ="{{ .RelPermalink }}"><br>
-              {{ $t := time.AsTime .Params.date }}
-            </a>
-          </div>
+          {{ with .Resize "900x" }}
+            {{ $mySize = 1 }}
+            {{ with .Params.Size }}
+              {{ $mySize = . }}
+            {{ end}}
+            {{ $mySize = mul $mySize 100 }}
+            <div style="width:{{$mySize}}%;" >
+              <a class="galleryItem" href="{{ .RelPermalink }}">            
+                <img src ="{{ .RelPermalink }}"><br>
+              </a>
+            </div>
+          {{ end }}
         {{ end }}
       </div>
   {{ end }}
