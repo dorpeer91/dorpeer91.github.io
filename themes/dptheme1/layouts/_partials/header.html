@@ -1,7 +1,10 @@
 <header>
   <div class="websiteHeader">
+      {{ with resources.Get "images/hamburger_w.png" }}    
+      <img id="hamburger" src="{{ .RelPermalink }}" alt="{{ $.Site.Title}} Logo" height="35px"  onclick="toggleVerticalMenu()" style="display:none;">
+      {{ end }}
       {{ with resources.Get "images/logo_WoA.png" }}    
-      <img src="{{ .RelPermalink }}" alt="{{ $.Site.Title}} Logo" width="35">
+      <img  src="{{ .RelPermalink }}" alt="{{ $.Site.Title}} Logo" height="35px" >
       {{ end }}
       <h1>
         {{ with .Site.Home }}
@@ -10,12 +13,32 @@
         {{ site.Title }}
         </a>
       </h1>
-  </div>
+    </div>
   {{ with .Site.Menus.main }}
-  <nav class="menu">
+  <nav id="menu" class="menu">
     {{ range .}}
       <a class ="menuItem" href="{{.URL}}">{{ .Name }}</a>
     {{ end }}
   {{ end }}
   </nav>
+    <script>
+    let menuOpen = false;
+    let winWidth = window.innerWidth;
+    let myMenu = document.getElementById("menu");
+    let myHamburger = document.getElementById("hamburger");
+
+    if (window.innerWidth < 500) {
+      myMenu.style.display = "none";
+      myHamburger.style.display = "block";
+    }
+    function toggleVerticalMenu() {
+      if( menuOpen ) {
+        myMenu.style.display = "none";
+        menuOpen = false;
+      } else {
+        myMenu.style.display = "";
+        menuOpen = true;
+      };
+    };
+  </script>
 </header>

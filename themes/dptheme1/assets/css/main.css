@@ -47,6 +47,7 @@ header {
     .websiteHeader {
         display: flex;
         align-items: center;
+        display: flex;
         h1 {
             font-size: 2rem;
             margin: 10px;
@@ -55,8 +56,10 @@ header {
                 text-decoration: none;
             }
         }
+
     }
     nav {
+        display: block;
         margin: auto;
         margin-right: 0px;
         .menuItem {
@@ -305,11 +308,8 @@ MOBILE
         grid-template-columns: 1fr 1fr;
     }
     header {
-        flex-direction: column;
         padding-block: 2rem 2rem;
-        .websiteHeader {
-            margin: auto;
-        }
+        flex-direction: column;
         nav {
             margin: 0px;
             display: grid;
@@ -356,9 +356,5 @@ MOBILE
     .blogContent {
         max-width: 48rem;
         margin: auto;
-        p {
-            font-size: 1.5rem;
-            line-height: 1.75rem;
-        }
     }
 }

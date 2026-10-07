@@ -1,0 +1,1 @@
+result = prompt("hello", "thanks")
