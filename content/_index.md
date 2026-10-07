@@ -17,6 +17,4 @@ During my spare time I work on personal projects that are usually dark, weird an
 
 Occasionally I write about the creative process (And other stuff) in my [blog](/blog)
 
-
-This is my personal / portfolio website which I've built myself using HTML, CSS and using HUGO as a framework. You can read more about that process and why I did that [here](blog/post002/). I'm also on Social Media (sometimes), you can follow me on [Youtube](https://www.youtube.com/dorpeer91), [Instagram](https://www.instagram.com/dorpeer91) and [Tiktok](https://www.tiktok.com/@dorpeer91).
-
+This is my personal / portfolio website which I built using HTML, CSS and HUGO as a framework. You can read more about it [here](blog/post002/). I'm also on Social Media (sometimes), you can follow me on [Youtube](https://www.youtube.com/dorpeer91), [Instagram](https://www.instagram.com/dorpeer91) and [Tiktok](https://www.tiktok.com/@dorpeer91).
