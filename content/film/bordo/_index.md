@@ -7,6 +7,25 @@ layout: project
 description: "A suspense horror short I wrote and directed in 2020"
 params:
   showDate: false
+  cast:
+  - Alon Leshem
+  - Efrat Arnon
+  - Yakir Eliahu Vaknin
+  crew:
+    - role: "Written and Directed by"
+      name: "Dor Peer"
+    - role: "Production"
+      name: "Yael Malka"
+    - role: "Cinematography"
+      name: "Raz Birger"
+    - role: "Editing"
+      name: "Tom Geffen Bezrukov"
+    - role: "Color Grading"
+      name: "Leon Grin"
+    - role: "Original Score"
+      name: "Daniel Shemer"
+    - role: "Sound Design"
+      name: "Daniel Shemer"
 ---
 
 {{< vimeo 387306435 >}}

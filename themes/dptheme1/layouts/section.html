@@ -1,13 +1,5 @@
 {{ define "main" }}
-  <h1>{{ .Name }}
-  {{ with eq .Title "Blog" }}
-    {{ partial "rssbutton.html" $ }}
-  {{ end }}
-  </h1>
-  {{/* Description */}}
-  {{ with .Description }}
-    <p>{{ . }}</p>
-  {{ end }}
+  {{ partial "pageheader.html" . }}
 
   {{ .Content }}
   {{ if eq .Title "Blog" }}

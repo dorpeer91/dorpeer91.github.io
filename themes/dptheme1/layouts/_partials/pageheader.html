@@ -1,0 +1,23 @@
+<div class="pageHeader">
+<h1>
+    {{ .Title }}
+    {{ with eq .Title "Blog" }}
+      {{ partial "rssbutton.html" $ }}
+    {{ end }}
+</h1>
+{{/* Back Button */}}
+    {{ with .Parent }}
+    <p><a href="{{ .RelPermalink }}">< back to {{.Title}}</a></p>
+    {{ end }}
+{{/* Date  */}}
+    {{ if eq .Kind "page" }}
+        {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
+        {{ $dateHuman := .Date | time.Format ":date_long" }}
+        <div class="time" ><time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time></div>
+    {{ end }}
+{{/* Next and Previous */}}
+{{/* Description */}}
+{{ with .Description }}
+    <p>{{ . }}</p>
+{{ end }}
+</div>
