@@ -336,11 +336,12 @@ MOBILE
         }
         .entryInfo {
             h2 {
-                font-size: 1.5rem;
+                font-size: 1.25rem;
                 line-height: 1.85rem;
             }
             width: 100%;
-            margin-left: 0px;   
+            margin-left: 0px;
+            margin-block-start: 20px;
             * {
                 margin-block-start: 0px;
                 margin-block-end: 5px
