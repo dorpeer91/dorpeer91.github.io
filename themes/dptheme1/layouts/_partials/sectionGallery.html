@@ -1,22 +1,3 @@
 <div class="sectionGallery">
-    {{ range . }}
-    <div class="item"><a href="{{ .RelPermalink }}">
-        <div class="cover">
-          {{ $coverImage := partial "getCover.html" . }}
-          <img src="{{ $coverImage.RelPermalink }}">
-        </div>
-        <div class="details">
-          <h2>{{ .LinkTitle }}</h2>
-          {{ if .Params.showDate }}
-          <p>
-            {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
-            {{ $dateHuman := .Date | time.Format ":date_long" }}
-            <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
-          </p>
-          {{ end }}
-          <p>{{ with .Description }}{{ . }}{{ end }}</p>
-        </div>
-
-    </a></div>
-    {{ end }}
+  {{ partial "pageGallery.html" . }}
 </div>
