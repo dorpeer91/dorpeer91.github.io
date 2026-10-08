@@ -4,6 +4,9 @@ draft: false
 title: Ink
 weight: 5
 layout: gallery
+menus:
+  main:
+    parent: Illustration
 params:
   showDate: false
 resources:

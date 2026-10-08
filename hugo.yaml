@@ -12,32 +12,5 @@ pluralizelisttitles: "false"
 caches:
   images:
     dir: :cacheDir/images
-menus:
-  main:
-  - name: animation
-    pageRef: /animation/
-    weight: 10
-  - name: film
-    pageRef: /film/
-    weight: 10
-  - name: illustration
-    pageRef: /illustration/
-    weight: 20
-  - name: motion design
-    pageRef: /motion-design
-    weight: 30
-  - name: creative director
-    pageRef: /creative-director
-    weight: 35
-    parent: motion design
-  - name: about
-    pageRef: /about
-    weight: 50
-  - name: contact
-    pageRef: /contact/
-    weight: 60
-  - name: blog
-    pageRef: /blog/
-    weight: 40
 disableKinds:
 - rss

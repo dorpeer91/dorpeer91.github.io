@@ -1,7 +1,7 @@
 <header>
   <div class="websiteHeader">
       {{ with resources.Get "images/hamburger_w.png" }}    
-      <img id="hamburger" src="{{ .RelPermalink }}" alt="{{ $.Site.Title}} Logo" height="35px"  onclick="toggleVerticalMenu()" style="display:none;">
+      <img class="hamburger" id="hamburger" src="{{ .RelPermalink }}" alt="{{ $.Site.Title}} Logo" height="35px"  onclick="toggleVerticalMenu()" >
       {{ end }}
       {{ with resources.Get "images/logo_WoA.png" }}    
       <img  src="{{ .RelPermalink }}" alt="{{ $.Site.Title}} Logo" height="35px" >
@@ -15,28 +15,40 @@
       </h1>
     </div>
   {{ with .Site.Menus.main }}
+
   <nav id="menu" class="menu">
+    {{ $curMenuItem := dict }}
     {{ range .}}
-      <a class ="menuItem" href="{{.URL}}">{{ .Name }}</a>
+      {{ $curMenuItem = . }}
+      <div class ="menuItem">
+        <a href="{{.URL}}">{{ .Name }}</a>
+        
+        {{ with .HasChildren }}
+          <div class="subMenu">
+            {{ range $curMenuItem.Children }}
+              <div class ="subMenuItem">
+                <a href="{{.URL}}">{{ .Name }}</a>
+              </div>
+            {{ end }}
+          </div>
+        {{ end }}
+      </div>
     {{ end }}
   {{ end }}
   </nav>
+  
     <script>
     let menuOpen = false;
     let winWidth = window.innerWidth;
     let myMenu = document.getElementById("menu");
     let myHamburger = document.getElementById("hamburger");
 
-    if (window.innerWidth < 800) {
-      myMenu.style.display = "none";
-      myHamburger.style.display = "block";
-    }
     function toggleVerticalMenu() {
       if( menuOpen ) {
-        myMenu.style.display = "none";
+        myMenu.style.display = "";
         menuOpen = false;
       } else {
-        myMenu.style.display = "";
+        myMenu.style.display = "grid";
         menuOpen = true;
       };
     };

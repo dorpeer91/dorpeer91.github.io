@@ -6,6 +6,9 @@ weight: 20
 layout: gallery
 params:
     showDate: false
+menus:
+  main:
+    parent: Illustration
 resources:
 - src: images/highVoltage.jpg
   title: High Voltage

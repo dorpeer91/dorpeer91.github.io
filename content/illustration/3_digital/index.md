@@ -6,6 +6,9 @@ weight: 30
 layout: gallery
 params:
     showDate: false
+menus:
+  main:
+    parent: Illustration
 resources:
 - src: images/whatever.jpg
   title: Whatever

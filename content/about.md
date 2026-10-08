@@ -2,6 +2,9 @@
 date: '2026-09-05T11:33:40+02:00'
 draft: false
 title: 'About'
+menus:
+  main:
+    weight: 40
 params:
   showDate: false
 ---

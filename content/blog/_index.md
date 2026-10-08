@@ -5,4 +5,7 @@ title: 'Blog'
 outputs:
 - html
 - rss
+menus:
+  main:
+    weight: 35
 ---

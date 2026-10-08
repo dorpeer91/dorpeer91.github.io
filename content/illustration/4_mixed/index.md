@@ -6,6 +6,9 @@ weight: 50
 layout: gallery
 params:
     showDate: false
+menus:
+  main:
+    parent: Illustration
 resources:
 - src: images/bathtub.web.jpg 
   title: bathtub

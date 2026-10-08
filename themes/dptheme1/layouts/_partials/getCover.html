@@ -4,10 +4,20 @@
     {{ $coverImage = . }}
 {{ else }}
     {{ with .Resources.ByType "image" }}
-    {{ range . }}
-        {{ $coverImage = .}}
-        {{ break }}
+        {{ range . }}
+            {{ $coverImage = .}}
+            {{ break }}
+        {{ end }}
     {{ end }}
+    {{ with sort .Pages "Date" }}
+        {{ range . }}
+          {{ with .Resources.ByType "image" }}
+            {{ range . }}
+                {{ $coverImage = .}}
+                {{ break }}
+            {{ end }}
+          {{ end }}
+        {{ end }}
     {{ end }}
 {{ end }}
 {{ return $coverImage }}

@@ -2,9 +2,5 @@
   {{ partial "pageheader.html" . }}
 
   {{ .Content }}
-  {{ if eq .Title "Blog" }}
-    {{ partial "blogGallery.html" .Pages }}
-  {{ else }}
-    {{ partial "sectionGallery.html" .Pages }}
-  {{ end }}
+  {{ partial "sectionGallery.html" .Pages }}
 {{ end }}

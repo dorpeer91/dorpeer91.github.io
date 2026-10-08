@@ -4,4 +4,7 @@ draft: false
 title: 'Illustration'
 params:
   showDate: false
+menus:
+  main:
+    weight: 30
 ---
