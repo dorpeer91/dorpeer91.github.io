@@ -349,6 +349,7 @@ MOBILE
                     display: block;
                     position: static;
                     font-size: 1.25rem;
+                    background: none;
                     a {
                         color: var(--muted-text-color);
                     }
