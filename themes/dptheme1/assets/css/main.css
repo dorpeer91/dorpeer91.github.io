@@ -217,6 +217,7 @@ footer {
     display: block;
     background-color: var(--bg-accent);
     border-radius: 10px;
+    border: 1px solid #2b2b2b;
     .details {
         padding: 10px;
         h2 {

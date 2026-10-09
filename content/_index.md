@@ -13,7 +13,7 @@ I'm a [filmmaker](film/), [animator](animation/), [illustrator](illustration/) a
 
 During my spare time I work on personal projects that are usually dark, weird and surreal, but sometimes also funny. Right now I am working on a short pilot called "[Shuttered](/animation/shuttered)".
 
-[![Shuttered](shuttered_001.gif)](/animation/shuttered)
+[![Shuttered](shuttered_001.gif)](projects/shuttered/)
 
 Occasionally I write about the creative process (And other stuff) in my [blog](/blog)
 
