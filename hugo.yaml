@@ -14,3 +14,9 @@ caches:
     dir: :cacheDir/images
 disableKinds:
 - rss
+markup:
+  goldmark:
+    parser:
+      attribute:
+        block: true
+        title: true

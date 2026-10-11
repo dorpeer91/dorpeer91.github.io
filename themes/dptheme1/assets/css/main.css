@@ -317,6 +317,14 @@ footer {
     }
 }
 
+/* Aside images */
+.aside {
+    float: right;
+    max-width: 25%;
+    margin-left: 20px;
+}
+
+
 /* 
 MOBILE 
 MOBILE 

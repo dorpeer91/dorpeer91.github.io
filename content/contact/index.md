@@ -10,6 +10,6 @@ menus:
     weight: 50
 ---
 
-If you would like to work together, purchase any of my art, or have any questions, feel free to contact me.
+If you would like to collaborate, purchase any of my art, or have any questions, feel free to contact me.
 
 dorpeer91 (at) gmail.com
