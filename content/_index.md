@@ -9,7 +9,7 @@ outputs:
 
 
 
-I'm a filmmaker, animator, [illustrator](illustration/) and [freelance motion designer](commercial/motion-design/) and [creative director](commercial/creative-director/), making video-explainers and motion graphic ads for companies like HPE, CityFans and others.
+I am a filmmaker, animator, [illustrator](illustration/) and [freelance motion designer](commercial/motion-design/) and [creative director](commercial/creative-director/), making video-explainers and motion graphic ads for companies like HPE, CityFans and others.
 
 During my spare time I work on personal projects that are usually dark, weird and surreal. Right now I am working on a short animated pilot called "[Shuttered](/animation/shuttered)".
 
